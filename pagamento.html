@@ -12,24 +12,11 @@ body{background:var(--black);color:#f0f0f0;font-family:'Inter',sans-serif;min-he
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
 
 /* STICKY TIMER BAR */
-.timer-bar{
-  position:sticky;top:0;z-index:200;
-  background:#0d1a0d;
-  border-bottom:1px solid rgba(143,255,0,.25);
-  padding:10px 20px;
-  display:flex;align-items:center;justify-content:center;gap:12px;
-  backdrop-filter:blur(8px);
-}
+.timer-bar{position:sticky;top:0;z-index:200;background:#0d1a0d;border-bottom:1px solid rgba(143,255,0,.25);padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:12px;backdrop-filter:blur(8px)}
 .timer-bar-label{font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase}
 .timer-bar-digits{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--green);letter-spacing:4px;line-height:1;text-shadow:0 0 12px rgba(143,255,0,.5)}
 .timer-bar-icon{font-size:18px}
-.timer-bar-badge{
-  font-size:9px;font-weight:700;letter-spacing:1.5px;
-  background:rgba(143,255,0,.15);border:1px solid rgba(143,255,0,.3);
-  color:var(--green);border-radius:20px;padding:3px 8px;
-  text-transform:uppercase;white-space:nowrap;
-  animation:pulse-badge 2s ease-in-out infinite;
-}
+.timer-bar-badge{font-size:9px;font-weight:700;letter-spacing:1.5px;background:rgba(143,255,0,.15);border:1px solid rgba(143,255,0,.3);color:var(--green);border-radius:20px;padding:3px 8px;text-transform:uppercase;white-space:nowrap;animation:pulse-badge 2s ease-in-out infinite}
 @keyframes pulse-badge{0%,100%{opacity:1}50%{opacity:.5}}
 
 .page{position:relative;z-index:1;max-width:400px;margin:0 auto;padding:36px 20px 80px}
@@ -37,11 +24,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;text-decoration:none;margin-bottom:28px;transition:color .15s}
 .back:hover{color:var(--green)}
 
-.pay-header{text-align:center;margin-bottom:28px}
-.pay-logo{width:200px;border-radius:6px;margin-bottom:16px}
-.pay-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:#fff;margin-bottom:6px}
-.pay-sub{font-size:13px;color:var(--muted);line-height:1.6}
+/* HERO TIPOGRÁFICO */
 
+
+/* STEPS */
 .steps{display:flex;align-items:center;justify-content:center;margin-bottom:28px}
 .step{display:flex;flex-direction:column;align-items:center;gap:5px}
 .step-num{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
@@ -59,7 +45,6 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .price-old{font-size:13px;color:rgba(0,0,0,.45);text-decoration:line-through;position:relative;z-index:1;margin-bottom:2px}
 .price-val{font-family:'Bebas Neue',sans-serif;font-size:64px;color:#000;line-height:1;letter-spacing:2px;position:relative;z-index:1}
 .price-val span{font-size:34px}
-.price-economy{display:inline-block;font-size:11px;font-weight:700;background:rgba(0,0,0,.12);color:#000;border-radius:20px;padding:3px 10px;letter-spacing:1px;margin-top:4px;position:relative;z-index:1}
 .price-desc{font-size:11px;font-weight:600;color:rgba(0,0,0,.45);letter-spacing:1.5px;margin-top:6px;position:relative;z-index:1}
 
 /* PIX */
@@ -93,6 +78,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .back-lp:hover{color:var(--green)}
 
 @media(min-width:480px){.btn-wpp:hover{transform:translateY(-2px)}}
+
+/* HERO TIPOGRAFICO */
+.pay-hero{text-align:center;margin-bottom:28px;padding:36px 24px 32px;background:#0e180e;border:1px solid rgba(143,255,0,.35);border-radius:20px;position:relative;overflow:hidden;width:100%;max-width:340px;box-shadow:0 0 40px rgba(143,255,0,.1),inset 0 0 40px rgba(143,255,0,.04)}
+.pay-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.pay-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.hero-glow{position:absolute;border-radius:50%;pointer-events:none}
+.hero-glow-top{top:-40px;left:50%;transform:translateX(-50%);width:220px;height:90px;background:radial-gradient(ellipse,rgba(143,255,0,.25) 0%,transparent 70%)}
+.hero-glow-bottom{bottom:-40px;left:50%;transform:translateX(-50%);width:220px;height:90px;background:radial-gradient(ellipse,rgba(143,255,0,.18) 0%,transparent 70%)}
+.hero-main{font-family:'Bebas Neue',sans-serif;font-size:54px;letter-spacing:4px;line-height:1;color:#fff;text-shadow:0 0 30px rgba(143,255,0,.4),0 0 60px rgba(143,255,0,.15);margin-bottom:10px;position:relative;z-index:1}
+.hero-sub{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:6px;color:var(--green);text-shadow:0 0 20px rgba(143,255,0,.7),0 0 40px rgba(143,255,0,.35);text-transform:uppercase;position:relative;z-index:1}
 </style>
 </head>
 <body>
@@ -111,12 +106,15 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 
   <a href="index.html" class="back">← Voltar para a imersão</a>
 
-  <div class="pay-header">
-    <img src="Design%20sem%20nome.png">
-    <p class="pay-title">Finalize sua matrícula</p>
-    <p class="pay-sub">Siga os passos abaixo para garantir sua vaga</p>
+  <!-- HERO TIPOGRÁFICO -->
+  <div class="pay-hero">
+    <div class="hero-glow hero-glow-top"></div>
+    <div class="hero-glow hero-glow-bottom"></div>
+    <p class="hero-main">IMERSÃO MT.28</p>
+    <p class="hero-sub">A Grande Comissão</p>
   </div>
 
+  <!-- STEPS -->
   <div class="steps">
     <div class="step active"><div class="step-num">1</div><div class="step-label">PAGUE</div></div>
     <div class="step-line"></div>
@@ -125,7 +123,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="step inactive"><div class="step-num">3</div><div class="step-label">ACESSE</div></div>
   </div>
 
-  <!-- PREÇO AQUI -->
+  <!-- PREÇO -->
   <div class="price-box">
     <p class="price-lbl">Valor da matrícula</p>
     <p class="price-old">De R$ 109,90</p>
@@ -184,14 +182,11 @@ function startTimer() {
   }
   function update() {
     const diff = end - Date.now();
-    if (diff <= 0) {
-      document.getElementById('timer').textContent = '00:00:00';
-      return;
-    }
+    if (diff <= 0) { document.getElementById('timer').textContent = '00:00:00'; return; }
     const h = Math.floor(diff / 3600000).toString().padStart(2,'0');
     const m = Math.floor((diff % 3600000) / 60000).toString().padStart(2,'0');
     const s = Math.floor((diff % 60000) / 1000).toString().padStart(2,'0');
-    document.getElementById('timer').textContent = h + ':' + m + ':' + s;
+    document.getElementById('timer').textContent = h+':'+m+':'+s;
     setTimeout(update, 1000);
   }
   update();
