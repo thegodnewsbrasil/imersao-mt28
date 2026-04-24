@@ -18,8 +18,8 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:blink 1.4s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
-.logo-wrap{width:100%;max-width:380px;margin-bottom:20px}
-.logo-wrap img{width:100%;border-radius:12px;display:block;box-shadow:0 0 40px rgba(143,255,0,.25),0 8px 32px rgba(0,0,0,.6)}
+
+
 
 
 
@@ -46,6 +46,25 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .btn-main .sub{display:block;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;opacity:.6;margin-top:3px}
 
 .cta-wrap{width:100%;max-width:340px;margin-bottom:12px}
+
+/* HERO TIPOGRÁFICO */
+.pay-hero{
+  text-align:center;margin-bottom:28px;
+  padding:36px 24px 32px;
+  background:#0e180e;
+  border:1px solid rgba(143,255,0,.35);
+  border-radius:20px;
+  position:relative;overflow:hidden;
+  width:100%;max-width:340px;
+  box-shadow:0 0 40px rgba(143,255,0,.1), inset 0 0 40px rgba(143,255,0,.04);
+}
+.pay-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.pay-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.hero-glow{position:absolute;border-radius:50%;pointer-events:none}
+.hero-glow-top{top:-40px;left:50%;transform:translateX(-50%);width:200px;height:80px;background:radial-gradient(ellipse,rgba(143,255,0,.22) 0%,transparent 70%)}
+.hero-glow-bottom{bottom:-40px;left:50%;transform:translateX(-50%);width:200px;height:80px;background:radial-gradient(ellipse,rgba(143,255,0,.15) 0%,transparent 70%)}
+.hero-main{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:4px;line-height:1;color:#fff;text-shadow:0 0 30px rgba(143,255,0,.4),0 0 60px rgba(143,255,0,.15);margin-bottom:10px}
+.hero-sub{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:6px;color:var(--green);text-shadow:0 0 20px rgba(143,255,0,.6),0 0 40px rgba(143,255,0,.3);text-transform:uppercase}
 .urgency{font-size:11px;color:var(--muted);letter-spacing:1px;margin-bottom:52px}
 .urgency span{color:var(--green)}
 
@@ -131,6 +150,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .timer-bar-icon{font-size:18px}
 .timer-bar-badge{font-size:9px;font-weight:700;letter-spacing:1.5px;background:rgba(143,255,0,.15);border:1px solid rgba(143,255,0,.3);color:var(--green);border-radius:20px;padding:3px 8px;text-transform:uppercase;white-space:nowrap;animation:pulse-badge 2s ease-in-out infinite}
 @keyframes pulse-badge{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* HERO TIPOGRAFICO */
+.pay-hero{text-align:center;margin-bottom:28px;padding:36px 24px 32px;background:#0e180e;border:1px solid rgba(143,255,0,.35);border-radius:20px;position:relative;overflow:hidden;width:100%;max-width:340px;box-shadow:0 0 40px rgba(143,255,0,.1),inset 0 0 40px rgba(143,255,0,.04)}
+.pay-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.pay-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.hero-glow{position:absolute;border-radius:50%;pointer-events:none}
+.hero-glow-top{top:-40px;left:50%;transform:translateX(-50%);width:220px;height:90px;background:radial-gradient(ellipse,rgba(143,255,0,.25) 0%,transparent 70%)}
+.hero-glow-bottom{bottom:-40px;left:50%;transform:translateX(-50%);width:220px;height:90px;background:radial-gradient(ellipse,rgba(143,255,0,.18) 0%,transparent 70%)}
+.hero-main{font-family:'Bebas Neue',sans-serif;font-size:54px;letter-spacing:4px;line-height:1;color:#fff;text-shadow:0 0 30px rgba(143,255,0,.4),0 0 60px rgba(143,255,0,.15);margin-bottom:10px;position:relative;z-index:1}
+.hero-sub{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:6px;color:var(--green);text-shadow:0 0 20px rgba(143,255,0,.7),0 0 40px rgba(143,255,0,.35);text-transform:uppercase;position:relative;z-index:1}
 </style>
 </head>
 <body>
@@ -149,12 +178,12 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 <section class="hero">
   <div class="badge-live"><span class="live-dot"></span>Vagas Abertas</div>
 
-  <div class="logo-wrap">
-    <img src="Design%20sem%20nome.png">
+  <div class="pay-hero">
+    <div class="hero-glow hero-glow-top"></div>
+    <div class="hero-glow hero-glow-bottom"></div>
+    <p class="hero-main">IMERSÃO MT.28</p>
+    <p class="hero-sub">A Grande Comissão</p>
   </div>
-
-  <p class="author-name">Osvaldo Alves</p>
-  <p class="author-handle">@osvaldoalvesss</p>
 
   <p class="promise">
     Uma jornada que começa no <strong>coração de Deus</strong> e termina em <strong>ação real na sua vida.</strong>
