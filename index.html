@@ -18,17 +18,17 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:blink 1.4s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
-.logo-wrap{width:100%;max-width:320px;margin-bottom:32px}
-.logo-wrap img{width:100%;border-radius:8px;display:block}
+.logo-wrap{width:100%;max-width:380px;margin-bottom:20px}
+.logo-wrap img{width:100%;border-radius:12px;display:block;box-shadow:0 0 40px rgba(143,255,0,.25),0 8px 32px rgba(0,0,0,.6)}
 
-.photo-outer{position:relative;width:160px;height:160px;margin:0 auto 22px}
-.photo-outer::before{content:'';position:absolute;inset:-3px;border-radius:50%;background:conic-gradient(var(--green) 0%,transparent 60%,var(--green) 100%);animation:spin 6s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.photo-ring{position:absolute;inset:3px;border-radius:50%;background:var(--black);z-index:1}
-.photo-wrap2{position:absolute;inset:6px;z-index:2;border-radius:50%;overflow:hidden}
-.photo-wrap2 img{width:100%;height:100%;object-fit:cover;object-position:center 10%}
 
-.author-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:5px;color:var(--green);margin-bottom:3px}
+
+
+
+
+
+
+.author-name{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:5px;color:var(--green);margin-bottom:3px}
 .author-handle{font-size:12px;color:var(--muted);letter-spacing:1.5px;margin-bottom:24px}
 
 .promise{max-width:300px;font-size:17px;line-height:1.75;color:#ccc;margin-bottom:24px;text-align:center}
@@ -151,13 +151,6 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 
   <div class="logo-wrap">
     <img src="Design_sem_nome.png" alt="Imersão MT.28">
-  </div>
-
-  <div class="photo-outer">
-    <div class="photo-ring"></div>
-    <div class="photo-wrap2">
-      <img src="IMG_1719.jpeg" alt="Osvaldo Alves">
-    </div>
   </div>
 
   <p class="author-name">Osvaldo Alves</p>
