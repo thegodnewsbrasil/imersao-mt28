@@ -12,7 +12,6 @@ body{background:var(--black);color:#f0f0f0;font-family:'Inter',sans-serif;min-he
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
 
 .page{position:relative;z-index:1;max-width:400px;margin:0 auto;padding:48px 20px 80px}
-
 .back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;text-decoration:none;margin-bottom:32px;transition:color .15s}
 .back:hover{color:var(--green)}
 
@@ -60,13 +59,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 
 .btn-wpp{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:18px;background:#25D366;color:#fff;border-radius:14px;text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;box-shadow:0 0 24px rgba(37,211,102,.3),0 4px 20px rgba(0,0,0,.4);transition:transform .15s;margin-bottom:10px}
 .btn-wpp:active{transform:scale(.97)}
-.btn-wpp .wpp-sub{display:block;font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;opacity:.8;margin-top:2px}
+.wpp-sub{display:block;font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;opacity:.8;margin-top:2px}
 .wpp-hint{font-size:11px;color:var(--muted);line-height:1.6;text-align:center;margin-top:8px}
-
-.back-lp{display:block;text-align:center;margin-top:28px;font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:.5px}
+.back-lp{display:block;text-align:center;margin-top:28px;font-size:12px;color:var(--muted);text-decoration:none}
 .back-lp:hover{color:var(--green)}
-
-@media(min-width:480px){.btn-wpp:hover{transform:translateY(-2px)}}
 </style>
 </head>
 <body>
@@ -75,7 +71,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   <a href="index.html" class="back">← Voltar para a imersão</a>
 
   <div class="pay-header">
-    <img src="https://raw.githubusercontent.com/thegodnewsbrasil/imersao-mt28/main/Design_sem_nome.png" alt="Imersão MT.28" class="pay-logo">
+    <img src="Design_sem_nome.png" alt="Imersão MT.28" class="pay-logo">
     <p class="pay-title">Finalize sua matrícula</p>
     <p class="pay-sub">Siga os passos abaixo para garantir sua vaga</p>
   </div>
